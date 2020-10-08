@@ -29,7 +29,7 @@ class Form extends Component {
     }
 
     render() {
-        const { fname, lname, email } = this.state; 
+        const { fname, lname, email, phone } = this.state; 
 
         return (
             <form onSubmit={this.onFormSubmit}>
@@ -54,10 +54,17 @@ class Form extends Component {
                     id="email"
                     value={email} 
                     onChange={this.handleChange} />
+                <label for="phone">Phone number</label>
+                <input 
+                    type="text" 
+                    name="phone" 
+                    id="phone"
+                    value={phone} 
+                    onChange={this.handleChange} />
                 <button type="submit">
                     Submit
                 </button>
-            </form>
+            </form> 
         );
     }
 }
