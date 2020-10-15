@@ -4,11 +4,11 @@ const TableHeader = () => {
     return (
         <thead>
             <tr>
-                <th>Fisrt name</th>
-                <th>Last name</th>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
                 <th>Email</th>
-                <th>Phone number</th>
-                <th>Delete</th>
+                <th>Action</th>
             </tr>
         </thead>
     );
@@ -18,10 +18,10 @@ const TableBody = props => {
     const rows = props.characterData.map((row, index) => {
         return (
             <tr key={index}>
-                <td>{row.fname}</td>
-                <td>{row.lname}</td>
+                <td>{row.id}</td>
+                <td>{row.firstname}</td>
+                <td>{row.lastname}</td>
                 <td>{row.email}</td>
-                <td>{row.phone}</td>
                 <td><button onClick={() => props.removeCharacter(index)}>Delete</button></td>
             </tr>
         );

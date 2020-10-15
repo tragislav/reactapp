@@ -1,13 +1,10 @@
-
 html {
   -ms-text-size-adjust: 100%;
+  
   -webkit-text-size-adjust: 100%;
-}
-
+   }
 body {
-  margin: 0; 
-}
-
+  margin: 0; }
 article,
 aside,
 details,
@@ -20,45 +17,29 @@ menu,
 nav,
 section,
 summary {
-  display: block; 
-}
-
+  display: block; }
 audio,
 canvas,
 progress,
 video {
   display: inline-block;
-  vertical-align: baseline; 
-}
+  vertical-align: baseline; }
 
 audio:not([controls]) {
   display: none;
-  height: 0; 
-}
-
+  height: 0; }
 [hidden],
 template {
-  display: none; 
-}
+  display: none; }
 
-/**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
 a:active,
 a:hover {
   outline: 0; }
 
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
 b,
 strong {
   font-weight: bold; }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
 sub,
 sup {
   font-size: 75%;
@@ -72,50 +53,28 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
 img {
   border: 0; }
 
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
 svg:not(:root) {
   overflow: hidden; }
 
-/**
- * Address differences between Firefox and other browsers.
- */
 hr {
   box-sizing: content-box;
   height: 0; }
 
-/**
- * Contain overflow in all browsers.
- */
 pre {
   overflow: auto; }
 
-/**
- * Re-set default cursor for disabled elements.
- */
 button[disabled],
 html input[disabled] {
   cursor: default; }
 
-/**
- * Remove inner padding and border in Firefox 4+.
- */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/* Reset
-  =============== */
 html {
   box-sizing: border-box; }
 
@@ -127,8 +86,6 @@ html {
 figure {
   margin: 0; }
 
-/* Scaffolding
-  =============== */
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -196,7 +153,8 @@ h5 {
   h3:not(:first-child) {
     margin-top: 2.5rem; }
   h1 {
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-left: 40%; }
   h2 {
     font-size: 1.6rem; }
   h3 {
@@ -207,10 +165,10 @@ h5 {
     font-size: 1.25rem; } }
 
 a {
-  color: #0366EE;
+  color: #ff0000;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #0246a2;
+    color: #ff0000;
     text-decoration: underline; }
 
 mark {
@@ -299,8 +257,6 @@ dd {
   .content-section {
     padding: 60px 0; } }
 
-/* Grid
-=============== */
 .flex-small,
 .flex-large {
   padding-left: 1rem;
@@ -320,20 +276,16 @@ dd {
   flex-basis: 100%;
   margin-bottom: 1rem; }
 
-/* Small screen breakpoint */
 @media (min-width: 600px) {
   .flex-small {
     flex: 1 1 0;
     margin-bottom: 0; } }
 
-/* Large screen breakpoint */
 @media (min-width: 1000px) {
   .flex-large {
     flex: 1 1 0;
     margin-bottom: 0; } }
 
-/* Helpers
-  =============== */
 .clearfix::before,
 .clearfix::after {
   content: " ";
@@ -422,14 +374,12 @@ dd {
   width: 1px;
   overflow: hidden; }
 
-/* Buttons
-  =============== */
 .button, a.button, button, [type=submit], [type=reset], [type=button] {
   -webkit-appearance: none;
   display: inline-block;
-  border: 1px solid #0366EE;
+  border: 1px solid #af0000;
   border-radius: 4px;
-  background: #0366EE;
+  background: #af0000;
   color: #ffffff;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -444,14 +394,14 @@ dd {
   line-height: 1; }
 
 .button:hover, a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
-  border: 1px solid #0250bc;
-  background: #0250bc;
+  border: 1px solid #00ffbf;
+  background:  #00ff88;
   color: #ffffff;
   text-decoration: none; }
 
 .button:focus, .button:active, a.button:focus, a.button:active, button:focus, button:active, [type=submit]:focus, [type=submit]:active, [type=reset]:focus, [type=reset]:active, [type=button]:focus, [type=button]:active {
-  border: 1px solid #0250bc;
-  background: #0250bc;
+  border: 1px solid  #af0000;
+  background:  #af0000;
   color: #ffffff;
   text-decoration: none; }
 
@@ -498,28 +448,25 @@ a.full-button {
   display: block;
   width: 100%; }
 
-/* Forms
-  =============== */
-[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
-  display: block;
-  border: 1px solid #cdcdcd;
-  border-radius: 4px;
-  padding: .75rem;
-  outline: none;
-  background: transparent;
-  margin-bottom: .5rem;
-  font-size: 1rem;
-  width: 100%;
-  max-width: 100%;
-  line-height: 1; }
-
-[type=color]:hover, [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=email]:hover, [type=month]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, [type=week]:hover, [type=time]:hover, select:hover, textarea:hover {
-  border: 1px solid #b4b4b4; }
-
-[type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {
-  border: 1px solid #0366EE;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #8cbcfe; }
-
+  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+    display: block;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    padding: .75rem;
+    outline: none;
+    background: transparent;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    width: 90%;
+    max-width: 90%;
+    line-height: 1; 
+    float:left; 
+    margin: 0 15px 15px 0; 
+    text-align:center;
+    padding: 10px;
+   
+    
+  }
 textarea {
   overflow: auto;
   height: auto; }
@@ -546,12 +493,64 @@ select::-ms-expand {
 
 [type=range] {
   width: 100%; }
+ 
+  .block {
+      float:left;
+      width:200px;
+}
+ .block1{
+  padding:60px;
+ }
+ .form-control {
+  width: 320px;  
+  font-family: Verdana, sans-serif;
+  position: relative;
+}
 
-label {
-  font-weight: 600;
-  max-width: 100%;
+.form-control input {
+  display: blocl;
+  outline: none;
+  width: 100%;
+  background: #fff;
+  border: 2px solid #fcc;
+  padding: 15px;
+  font-size: 24px;
+  color: #500;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.form-control label {
+  cursor: pointer;
   display: block;
-  margin: 1rem 0 .5rem; }
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  color: #aaa;
+  font-size: 20px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+
+.form-control input:valid + label,
+.form-control input:focus + label {
+  top: 0;
+  font-size: 14px;
+}
+
+
+  label {
+    font-weight: 600;
+    max-width: 100%;
+    display: block;
+    margin: 1rem 0 .5rem; 
+    float:left; 
+    margin: 0 15px 15px 0; 
+    text-align:center;
+    padding: 10px;
+    
+    }
 
 @media (min-width: 600px) {
   .split-form label {
@@ -577,8 +576,6 @@ textarea.has-error:active {
 :-ms-input-placeholder {
   color: #9a9a9a; }
 
-/* Tables
-  =============== */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -612,6 +609,4 @@ caption {
 
 @media (min-width: 600px) {
   .contain-table {
-    width: 100%; } 
-}
-
+    width: 100%; } }

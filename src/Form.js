@@ -1,70 +1,80 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 class Form extends Component {
     constructor(props) {
         super(props);
-        
-        this.initialState = {
-            fname: '',
-            lname: '',
+
+        this.state = {
+            id: 0,
+            firstname: '',
+            lastname: '',
             email: ''
         };
-
-        this.state = this.initialState;
     }
-
     handleChange = event => {
         const { name, value } = event.target;
 
         this.setState({
-            [name] : value
+            [name]: value
         });
     }
 
     onFormSubmit = (event) => {
         event.preventDefault();
-        
         this.props.handleSubmit(this.state);
         this.setState(this.initialState);
     }
+    onClickUp = () => {
+        this.setState((prevState) => {
+            return {
+                id: prevState.id + 1,
+            }
+        })
+    };
 
     render() {
-        const { fname, lname, email, phone } = this.state; 
+        const { firstname, lastname, email } = this.state;
 
         return (
+
             <form onSubmit={this.onFormSubmit}>
-                <label for="name">First name</label>
-                <input 
-                    type="text" 
-                    name="fname" 
-                    id="fname"
-                    value={fname} 
-                    onChange={this.handleChange} />
-                <label for="name">Last name</label>
-                <input 
-                    type="text" 
-                    name="lname" 
-                    id="lname"
-                    value={lname} 
-                    onChange={this.handleChange} />
-                <label for="email">Email</label>
-                <input 
-                    type="text" 
-                    name="email" 
-                    id="email"
-                    value={email} 
-                    onChange={this.handleChange} />
-                <label for="phone">Phone number</label>
-                <input 
-                    type="text" 
-                    name="phone" 
-                    id="phone"
-                    value={phone} 
-                    onChange={this.handleChange} />
-                <button type="submit">
-                    Submit
+
+                <div class="block"><label for="firstname">FirstName</label>
+                    <input
+                        type="text"
+                        name="firstname"
+                        id="firstname"
+                        value={firstname}
+                        onChange={this.handleChange} />
+                </div>
+
+                <div class="block"><label for="lastname">LastName</label>
+                    <input
+                        type="text"
+                        name="lastname"
+                        id="lastname"
+                        value={lastname}
+                        onChange={this.handleChange} />
+                </div>
+
+                <div class="block">
+                    <label for="email">Email</label>
+                    <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        value={email}
+                        onChange={this.handleChange} />
+                </div >
+
+                <div class="block1">
+                    <button type="submit" onClick={this.onClickUp}>
+                        Add User
                 </button>
-            </form> 
+                </div>
+                <h3>Users</h3>
+                
+            </form>
+
         );
     }
 }
