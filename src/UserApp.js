@@ -4,7 +4,7 @@ import Table from './Table';
 import Form from './Form';
 
 
-class App extends Component {
+class UserApp extends Component {
     state = {
         characters: []
     };
@@ -29,7 +29,6 @@ class App extends Component {
             
             <div className="container">
                 <header></header>
-                <Form handleSubmit={this.handleSubmit} />
                 <Table
                     characterData={characters}
                     removeCharacter={this.removeCharacter}
@@ -41,4 +40,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default UserApp;

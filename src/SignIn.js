@@ -32,10 +32,12 @@ handleChange = event => {
 }
 
 handleButtonClick = event => {
-    if (this.state.email === "123@mail.ru" && this.state.password === '1111') {
-    this.props.history.push('/main');
+    if (this.state.email === "admin" && this.state.password === 'admin') {
+        this.props.history.push('/main');
+    } else if (this.state.email === "123@mail.ru" && this.state.password === '1111') {
+        this.props.history.push('/foreign');
     }
-    else { alert("Неверный пароль"); }
+    else { alert('Данные для авторизации не верны.'); }
 }
 
 render() {
@@ -64,11 +66,9 @@ render() {
     <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-        </Avatar>
+        <header></header>
         <Typography component="h1" variant="h5">
-            Sign in
+            Вход
         </Typography>
         <form className={classes.form} noValidate>
             <TextField

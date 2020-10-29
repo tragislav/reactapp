@@ -5,10 +5,10 @@ const TableHeader = () => {
         <thead>
             <tr>
                 <th>Id</th>
-                <th>FirstName</th>
-                <th>LastName</th>
+                <th>First Name</th>
+                <th>Last Name</th>
                 <th>Email</th>
-                <th>Action</th>
+                <th>Шо делать будем?</th>
             </tr>
         </thead>
     );

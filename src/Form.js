@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -35,10 +37,10 @@ class Form extends Component {
         const { firstname, lastname, email } = this.state;
 
         return (
-
+            
             <form onSubmit={this.onFormSubmit}>
 
-                <div class="block"><label for="firstname">FirstName</label>
+                <div class="block"><label for="firstname">First Name</label>
                     <input
                         type="text"
                         name="firstname"
@@ -47,7 +49,7 @@ class Form extends Component {
                         onChange={this.handleChange} />
                 </div>
 
-                <div class="block"><label for="lastname">LastName</label>
+                <div class="block"><label for="lastname">Last Name</label>
                     <input
                         type="text"
                         name="lastname"
@@ -71,7 +73,7 @@ class Form extends Component {
                         Add User
                 </button>
                 </div>
-                <h3>Users</h3>
+                <h3>Таблица</h3>
                 
             </form>
 
