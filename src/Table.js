@@ -8,6 +8,7 @@ const TableHeader = () => {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Number Phone</th>
                 <th>Шо делать будем?</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@ const TableBody = props => {
                 <td>{row.firstname}</td>
                 <td>{row.lastname}</td>
                 <td>{row.email}</td>
+                <td>{row.phone}</td>
                 <td><button onClick={() => props.removeCharacter(index)}>Delete</button></td>
             </tr>
         );

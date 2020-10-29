@@ -29,6 +29,7 @@ class UserApp extends Component {
             
             <div className="container">
                 <header></header>
+                <h1>Data Table</h1>
                 <Table
                     characterData={characters}
                     removeCharacter={this.removeCharacter}

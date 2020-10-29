@@ -9,7 +9,8 @@ class Form extends Component {
             id: 0,
             firstname: '',
             lastname: '',
-            email: ''
+            email: '',
+            phone: ''
         };
     }
     handleChange = event => {
@@ -34,7 +35,7 @@ class Form extends Component {
     };
 
     render() {
-        const { firstname, lastname, email } = this.state;
+        const { firstname, lastname, email, phone } = this.state;
         return (
             
             <form onSubmit={this.onFormSubmit}>
@@ -63,13 +64,20 @@ class Form extends Component {
                         value={email}
                         onChange={this.handleChange} />
                 </div>
+                <div class="block">
+                    <label for="phone">Number Phone</label>
+                    <input
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        value={phone}
+                        onChange={this.handleChange} />
+                </div>
                 <div class="block1">
                     <button type="submit" onClick={this.onClickUp}>
                         Add User
                 </button>
                 </div>
-                <h3>Таблица</h3>
-                
             </form>
         );
     }
