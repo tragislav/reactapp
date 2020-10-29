@@ -119,7 +119,7 @@ render() {
             <Grid container>
             <Grid item xs>
                 <Link href="#" variant="body2">
-                Forgot password?
+                    {"Forgot password?"}
                 </Link>
             </Grid>
             <Grid item>
