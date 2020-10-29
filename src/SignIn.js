@@ -15,124 +15,122 @@ import Container from '@material-ui/core/Container';
 //Laba 3
 
 class SignIn extends Component {
-constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-    password: '',
-    email: '',
-    };
-}
-handleChange = event => {
-    const { name, value } = event.target;
-
-    this.setState({
-    [name]: value
-    });
-}
-
-handleButtonClick = event => {
-    if (this.state.email === "admin" && this.state.password === 'admin') {
-        this.props.history.push('/main');
-    } else if (this.state.email === "123@mail.ru" && this.state.password === '1111') {
-        this.props.history.push('/foreign');
+        this.state = {
+            password: '',
+            email: '',
+        };
     }
-    else { alert('Данные для авторизации не верны.'); }
-}
+    handleChange = event => {
+        const { name, value } = event.target;
 
-render() {
-    const useStyles = makeStyles((theme) => ({
-    paper: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-    },
+        this.setState({
+        [name]: value
+        });
+    }
+
+    handleButtonClick = event => {
+        if (this.state.email === "admin" && this.state.password === 'admin') {
+            this.props.history.push('/main');
+        } else if (this.state.email === "123@mail.ru" && this.state.password === '1111') {
+            this.props.history.push('/foreign');
+        }
+        else { alert('Данные для авторизации не верны.'); }
+    }
+
+    render() {
+        const useStyles = makeStyles((theme) => ({
+        paper: {
+            marginTop: theme.spacing(8),
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+        },
+        avatar: {
+            margin: theme.spacing(1),
+            backgroundColor: theme.palette.secondary.main,
+        },
+        form: {
+            width: '100%', // Fix IE 11 issue.
+            marginTop: theme.spacing(1),
+        },
+        submit: {
+            margin: theme.spacing(3, 0, 2),
+        },
     }));
+
     const classes = useStyles;
     const { email, password } = this.state;
     return (
-    <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className={classes.paper}>
-        <header></header>
-        <Typography component="h1" variant="h5">
-            Вход
-        </Typography>
-        <form className={classes.form} noValidate>
-            <TextField
-            variant="outlined"
-            type="text"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            value={email}
-            autoFocus
-            onChange={this.handleChange}
-            
-            />
-            <TextField
-            variant="outlined"
-            type="text"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            value={password}
-            autoComplete="current-password"
-            onChange={this.handleChange}
-            />
-            <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-            />
-            <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            onChange={this.handleChange}
-            onClick={this.handleButtonClick}
-            >
-
-            Sign In
-        </Button>
-            <Grid container>
-            <Grid item xs>
-                <Link href="#" variant="body2">
-                    {"Forgot password?"}
-                </Link>
-            </Grid>
-            <Grid item>
-                <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                </Link>
-            </Grid>
-            </Grid>
-        </form>
-        </div>
-    </Container>
+        <Container component="main" maxWidth="xs">
+            <CssBaseline />
+            <div className={classes.paper}>
+            <header></header>
+            <Typography component="h1" variant="h5">
+                Вход
+            </Typography>
+            <form className={classes.form} noValidate>
+                <TextField
+                    variant="outlined"
+                    type="text"
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    value={email}
+                    autoFocus
+                    onChange={this.handleChange}
+                />
+                <TextField
+                    variant="outlined"
+                    type="text"
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    value={password}
+                    autoComplete="current-password"
+                    onChange={this.handleChange}
+                />
+                <FormControlLabel
+                    control={<Checkbox value="remember" color="primary" />}
+                    label="Remember me"
+                />
+                <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    className={classes.submit}
+                    onChange={this.handleChange}
+                    onClick={this.handleButtonClick}
+                >
+                    Sign In
+                </Button>
+                <Grid container>
+                    <Grid item xs>
+                        <Link href="#" variant="body2">
+                            {"Forgot password?"}
+                        </Link>
+                    </Grid>
+                    <Grid item>
+                        <Link href="#" variant="body2">
+                            {"Don't have an account? Sign Up"}
+                        </Link>
+                    </Grid>
+                </Grid>
+            </form>
+            </div>
+        </Container>
     );
-
-}
+    }
 }
 export default SignIn
