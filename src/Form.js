@@ -35,11 +35,9 @@ class Form extends Component {
 
     render() {
         const { firstname, lastname, email } = this.state;
-
         return (
             
             <form onSubmit={this.onFormSubmit}>
-
                 <div class="block"><label for="firstname">First Name</label>
                     <input
                         type="text"
@@ -48,7 +46,6 @@ class Form extends Component {
                         value={firstname}
                         onChange={this.handleChange} />
                 </div>
-
                 <div class="block"><label for="lastname">Last Name</label>
                     <input
                         type="text"
@@ -57,7 +54,6 @@ class Form extends Component {
                         value={lastname}
                         onChange={this.handleChange} />
                 </div>
-
                 <div class="block">
                     <label for="email">Email</label>
                     <input
@@ -66,8 +62,7 @@ class Form extends Component {
                         id="email"
                         value={email}
                         onChange={this.handleChange} />
-                </div >
-
+                </div>
                 <div class="block1">
                     <button type="submit" onClick={this.onClickUp}>
                         Add User
@@ -76,7 +71,6 @@ class Form extends Component {
                 <h3>Таблица</h3>
                 
             </form>
-
         );
     }
 }
